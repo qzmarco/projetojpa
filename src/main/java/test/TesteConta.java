@@ -19,11 +19,12 @@ public class TesteConta {
         em.getTransaction().begin();
         conta = em.find(Conta.class, 1);
         em.remove(conta);
-        
+
         conta.setBanco("Bradesco");
-        
+
         em.getTransaction().commit();
 
         em.close();
+        JPAUtil.close();
     }
 }

@@ -6,10 +6,16 @@ import javax.persistence.Persistence;
 
 public class JPAUtil {
 
-    private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("projetojpa_pu");
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("projetojpa_pu");
 
     public static EntityManager getEntityManager() {
-        return entityManagerFactory.createEntityManager();
+        return ENTITY_MANAGER_FACTORY.createEntityManager();
+    }
+
+    public static void close() {
+        if (ENTITY_MANAGER_FACTORY.isOpen()) {
+            ENTITY_MANAGER_FACTORY.close();
+        }
     }
 
 }
