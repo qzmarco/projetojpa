@@ -86,5 +86,4 @@ public class Movimentacao implements Serializable {
     public void setCategorias(List<Categoria> categoria) {
         this.categoria = categoria;
     }
-
 }
