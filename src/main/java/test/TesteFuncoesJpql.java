@@ -16,15 +16,11 @@ public class TesteFuncoesJpql {
         Conta conta = new Conta();
         conta.setId(2);
 
-        String jpql = "select avg(m.valor) as media from Movimentacao m where m.conta = :pConta "
-                + "and m.tipo = :pTipo "
-                + "group by m.data";
-
-        TypedQuery<Double> query = em.createQuery(jpql, Double.class);
-        query.setParameter("pConta", conta);
-        query.setParameter("pTipo", TipoMovimentacao.SAIDA);
-
-        List<Double> medias = query.getResultList();
+        TypedQuery<Double> typedQuery = em.createNamedQuery("MediasPorDiaETipo", Double.class);
+        typedQuery.setParameter("pConta", conta);
+        typedQuery.setParameter("pTipo", TipoMovimentacao.SAIDA);
+        
+        List<Double> medias = typedQuery.getResultList();
         
         System.out.println("A media 0 é: " + medias.get(0));
         System.out.println("A media 1 é: " + medias.get(1));

@@ -12,8 +12,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(query = "select avg(m.valor) as media from Movimentacao m where m.conta = :pConta "
+                + "and m.tipo = :pTipo "
+                + "group by m.data", name = "MediasPorDiaETipo")
 public class Movimentacao implements Serializable {
 
     @Id
