@@ -3,10 +3,11 @@ package test;
 import entity.Conta;
 import entity.Movimentacao;
 import entity.TipoMovimentacao;
+import jakarta.persistence.EntityManager;
+import util.JPAUtil;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import javax.persistence.EntityManager;
-import util.JPAUtil;
 
 public class TesteJpaRelacionamento {
 

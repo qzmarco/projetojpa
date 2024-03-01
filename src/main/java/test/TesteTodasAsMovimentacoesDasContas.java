@@ -1,10 +1,11 @@
 package test;
 
 import entity.Conta;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import util.JPAUtil;
+
+import java.util.List;
 
 public class TesteTodasAsMovimentacoesDasContas {
 
@@ -17,7 +18,7 @@ public class TesteTodasAsMovimentacoesDasContas {
         
         List<Conta> todasAsContas = query.getResultList();
         
-        todasAsContas.stream().forEach((conta) -> {
+        todasAsContas.forEach((conta) -> {
             System.out.println("Titular " + conta.getTitular());
             System.out.println("Movimentações " );
             System.out.println(conta.getMovimentacoes());

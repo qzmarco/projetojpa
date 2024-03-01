@@ -1,7 +1,7 @@
 package test;
 
 import entity.Conta;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import util.JPAUtil;
 
 public class TesteConta {

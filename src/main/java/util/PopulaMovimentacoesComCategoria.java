@@ -4,10 +4,11 @@ import entity.Categoria;
 import entity.Conta;
 import entity.Movimentacao;
 import entity.TipoMovimentacao;
+import jakarta.persistence.EntityManager;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Arrays;
-import javax.persistence.EntityManager;
 
 public class PopulaMovimentacoesComCategoria {
 

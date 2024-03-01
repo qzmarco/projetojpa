@@ -2,10 +2,11 @@ package test;
 
 import entity.Conta;
 import entity.TipoMovimentacao;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import util.JPAUtil;
+
+import java.util.List;
 
 public class TesteFuncoesJpql {
 

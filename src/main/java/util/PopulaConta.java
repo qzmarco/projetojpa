@@ -1,7 +1,7 @@
 package util;
 
 import entity.Conta;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 public class PopulaConta {
 

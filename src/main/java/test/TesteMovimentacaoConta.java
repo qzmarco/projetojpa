@@ -2,7 +2,7 @@ package test;
 
 import entity.Conta;
 import entity.Movimentacao;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import util.JPAUtil;
 
 public class TesteMovimentacaoConta {

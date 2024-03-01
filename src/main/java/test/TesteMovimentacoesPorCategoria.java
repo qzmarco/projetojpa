@@ -2,10 +2,11 @@ package test;
 
 import entity.Categoria;
 import entity.Movimentacao;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import util.JPAUtil;
+
+import java.util.List;
 
 public class TesteMovimentacoesPorCategoria {
 
@@ -22,7 +23,7 @@ public class TesteMovimentacoesPorCategoria {
 
         List<Movimentacao> resultados = query.getResultList();
 
-        resultados.stream().forEach((m) -> {
+        resultados.forEach((m) -> {
             System.out.println("Descrição " + m.getDescricao());
             System.out.println("Conta.id " + m.getConta().getId());
         });

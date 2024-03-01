@@ -3,10 +3,11 @@ package test;
 import entity.Conta;
 import entity.Movimentacao;
 import entity.TipoMovimentacao;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import util.JPAUtil;
+
+import java.util.List;
 
 public class TesteJpql {
 
